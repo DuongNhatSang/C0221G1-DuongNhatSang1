@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi tiền</title>
+    <style>
+        div{
+            float: left;
+        }
+        label{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+    <div>
+        <label>Amount</label><br>
+        <input name="value" type="number" id="value">
+    </div>
+    <div>
+        <label>From Currency</label><br>
+        <select name="From Currency">
+            <option>USD</option>
+            <option>VietNam</option>
+        </select>
+    </div>
+    <div>
+        <label>To Currency</label><br>
+        <select name="To Currency">
+            <option>VND</option>
+            <option>USD</option>
+        </select>
+    </div>
+    <div>
+        <br>
+        <button type="button" name="convert" onclick="convert1()">Convert</button>
+    </div>
+</form>
+<br>
+<h1 id="ketqua"></h1>
+<script>
+    function convert1() {
+        let value = parseInt(document.getElementById('value').value);
+        let a = value * 23000;
+        document.getElementById('ketqua').innerHTML= a;
+    }
+
+</script>
+</body>
+</html>

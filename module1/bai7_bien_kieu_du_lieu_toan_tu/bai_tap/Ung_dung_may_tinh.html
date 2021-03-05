@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<form>
+
+        <input type="number" name="num" id="num">
+        <input type="number" name="num2" id="num2"><br>
+        <button type="button" name="cong" onclick="cong1()">Addition(+)</button>
+        <button type="button" name="tru" onclick="tru1()">Subtraction(-)</button>
+        <button type="button" name="nhan" onclick="nhan1()">Mutiplication(X)</button>
+        <button type="button" name="chia" onclick="chia1()">Division(/)</button>
+
+</form>
+<br>
+<div>
+    <h2 id="ketqua"></h2>
+</div>
+<script>
+    function cong1() {
+        let value = parseInt(document.getElementById('num').value);
+        let valua2 =parseInt(document.getElementById('num2').value);
+        let tong = value + valua2
+        document.getElementById('ketqua').innerHTML= tong;
+    }
+    function tru1() {
+        let value = parseInt(document.getElementById('num').value);
+        let valua2 =parseInt(document.getElementById('num2').value);
+        let hieu = value - valua2
+        document.getElementById('ketqua').innerHTML= hieu;
+
+    }
+    function nhan1() {
+        let value = parseInt(document.getElementById('num').value);
+        let valua2 =parseInt(document.getElementById('num2').value);
+        let tich = value * valua2
+        document.getElementById('ketqua').innerHTML= tich;
+
+    }
+    function chia1() {
+        let value = parseInt(document.getElementById('num').value);
+        let valua2 =parseInt(document.getElementById('num2').value);
+        let hieu = value / valua2
+        document.getElementById('ketqua').innerHTML= hieu;
+
+    }
+</script>
+</body>
+</html>
