@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="https://bizweb.dktcdn.net/thumb/1024x1024/100/334/969/products/qua-bong-da-dong-luc-viet-nam-so-4.png?v=1556708925347" width="60px" height="60px"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click Me" onclick="moveRight();" />
+    <input type="button" value="Click Me" onclick="moveLeft();" />
+</form>
+<script>
+    let imgObj = document.getElementById('myImage');
+    window.onload = init;
+    function init() {
+        imgObj = document.getElementById('myImage');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+        imgObj.style.right = '0px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+    function moveLeft() {
+        imgObj.style.right = parseInt(imgObj.style.right) + 10 +'px';
+
+    }
+</script>
+</body>
+</html>

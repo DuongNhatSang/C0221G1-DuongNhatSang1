@@ -17,20 +17,20 @@
 <form>
     <div>
         <label>Amount</label><br>
-        <input name="value" type="number" id="value">
+        <input type="number" id="value">
     </div>
     <div>
         <label>From Currency</label><br>
-        <select name="From Currency">
-            <option>USD</option>
-            <option>VietNam</option>
+        <select id="tu">
+            <option value="23000">USD</option>
+            <option value="1">VietNam</option>
         </select>
     </div>
     <div>
         <label>To Currency</label><br>
-        <select name="To Currency">
-            <option>VND</option>
-            <option>USD</option>
+        <select id="toi">
+            <option value="1">VND</option>
+            <option value="23000">USD</option>
         </select>
     </div>
     <div>
@@ -42,11 +42,12 @@
 <h1 id="ketqua"></h1>
 <script>
     function convert1() {
-        let value = parseInt(document.getElementById('value').value);
-        let a = value * 23000;
-        document.getElementById('ketqua').innerHTML= a;
+        let tien = parseInt(document.getElementById('value').value);
+        let giatri = parseInt(document.getElementById('tu').value);
+        let giatri2 = parseInt(document.getElementById('toi').value);
+        let hienthi = tien*giatri/giatri2;
+        document.getElementById('ketqua').innerHTML ="ketqua = " + hienthi;
     }
-
 </script>
 </body>
 </html>
